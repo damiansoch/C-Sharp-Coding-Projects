@@ -13,8 +13,9 @@ namespace TwentyOne
         {
 
             Deck deck = new Deck();
+            int timesShuffled;
 
-            deck = Shuffle(deck);
+            deck.Shuffle(out timesShuffled, 3);
 
 
 
@@ -23,31 +24,18 @@ namespace TwentyOne
                 Console.WriteLine(card.Face + " of " + card.Suit);
             }
             Console.WriteLine(deck.Cards.Count);
+            Console.WriteLine("Shuffled {0} ", timesShuffled + " times!");
             Console.ReadLine();
         }
 
-        //method that shuffles the deck of card
-        //we will take the deck as an argument and than return shuffled deck
 
-        //public - available everywhere - Access Modifier
-        //static - we dont want to create Object Program before calling it ?
-        //Deck - thats whats it's returning - ReturnType
-        //Shuffle - name of the function
-        //(Deck deck) - takes a parameter of type Deck and assigning it to the variable - deck - Parameters
-        public static Deck Shuffle(Deck deck)
-        {
-            // temp list for shuffled cards
-            List<Card> TempList = new List<Card>();
-            Random random = new Random();
-
-            while (deck.Cards.Count > 0)
-            {
-                int randomIndex = random.Next(0, deck.Cards.Count);
-                TempList.Add(deck.Cards[randomIndex]);
-                deck.Cards.RemoveAt(randomIndex);
-            }
-            deck.Cards = TempList;
-            return deck;
-        }
+        //public static Deck Shuffle(Deck deck,int times)
+        //{
+        //    for(int i =0; i < times; i++)
+        //    {
+        //        deck = Shuffle(deck);
+        //    }
+        //    return deck;
+        //}
     }
 }
