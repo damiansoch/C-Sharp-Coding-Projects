@@ -11,18 +11,14 @@ namespace TwentyOne
 
         static void Main(string[] args)
         {
-            Game game = new TwentyOneGame();
-            game.Players = new List<Player>();
-            Player player = new Player();
-            player.Name = "damian";
-            game += player;
-            game -= player;
+
+
 
 
             Deck deck = new Deck();
             int timesShuffled;
 
-            deck.Shuffle(out timesShuffled, 3);
+            deck.Shuffle(out timesShuffled, 0);
 
 
             //// print shuffled cards
@@ -34,6 +30,7 @@ namespace TwentyOne
             Console.WriteLine("Shuffled {0} ", timesShuffled + " times!");
             Console.ReadLine();
         }
+
 
 
 
