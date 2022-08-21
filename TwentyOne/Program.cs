@@ -10,10 +10,9 @@ namespace TwentyOne
     class Program
     {
 
-
-
         static void Main(string[] args)
         {
+
             Console.WriteLine("Welcome to the Grand Hotel Casino. Let's Start by telling me your name.");
             string playerName = Console.ReadLine();
 
