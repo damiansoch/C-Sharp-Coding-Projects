@@ -25,6 +25,7 @@ namespace TwentyOne
             // when using "using statement" after the method reaces the closing bracket, it will dispose of the data, and freeup the memmory
             using (StreamWriter file = new StreamWriter(path, true))
             {
+                file.WriteLine(DateTime.Now);
                 file.WriteLine(card);
             }
 
