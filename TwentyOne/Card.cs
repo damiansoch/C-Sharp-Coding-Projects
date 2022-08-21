@@ -4,15 +4,9 @@ using System.Text;
 
 namespace TwentyOne
 {
-    public class Card
+    public struct Card
     {
-        ////constructor method
-        ////if we won't assign any values later, those will be the default values
-        //public Card()
-        //{
-        //    Suit = "Spades";
-        //    Face = "Two";
-        //}
+
         public Suit Suit { get; set; } //spades, clubs, hearts, and diamonds.
 
         //The card class has a property of data type string, called Suit.
@@ -20,6 +14,12 @@ namespace TwentyOne
         //Making this property pubic means it is accessible by other parts on the program
 
         public Face Face { get; set; }//ace, king...
+
+        //custo ToString method - 
+        public override string ToString()
+        {
+            return string.Format("{0} of {1}", Face, Suit);
+        }
 
     }
 
